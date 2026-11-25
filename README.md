@@ -67,6 +67,9 @@ python backfill.py      # load the last 7 days of hourly history
 python pipeline.py      # run the live ETL once
 python charts.py        # regenerate charts into docs/images/
 
+# Optional: regenerate charts and publish them to GitHub in one step
+powershell -ExecutionPolicy Bypass -File .\update_charts.ps1
+
 # Optional: run the pipeline automatically every hour (Windows)
 powershell -ExecutionPolicy Bypass -File .\schedule_task.ps1
 ```
